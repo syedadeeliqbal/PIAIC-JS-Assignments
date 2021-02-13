@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Assignment 2 of 21-30</title>
+  </head>
+  <body>
+    <script>
+      //         #### Second Assignment
+
+      // 1. input value from user in String ```var inputValue="cloUd naTive computinG"```
+      // 2. Convert every first letter of the content in Capitalize case. ```inputValue="Cloud Native Computing"```
+      // 3. print value in console.log() ```console.log(inputValue) | check result in browser console```
+
+      var inputValue = prompt("Enter a test string", "clouD naTive compUTing is amazing s");
+      inputValue = inputValue.toLowerCase();
+      var properCased = inputValue[0].toUpperCase() + inputValue.slice(1);
+
+      for (ctr = 1; ctr < properCased.length - 1; ctr++) {
+        if (properCased[ctr] === " " && ctr < properCased.length - 1) {
+          properCased =
+            properCased.slice(0, ctr + 1) + 
+            properCased[ctr + 1].toUpperCase() +
+            properCased.slice(ctr + 2);
+        }
+        console.log(properCased);
+      }
+      alert(properCased);
+    </script>
+  </body>
+</html>

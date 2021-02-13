@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment</title>
+</head>
+<body>
+    <script>
+        alert("HI Ameen, I already did them using loops. Copying previous assignment here")
+
+        var courses = [];
+      for (var ctr = 0; ctr < 5; ctr++) {
+        var message = `Enter course # ${ctr + 1}`
+
+        courses.push(prompt(message));
+      }
+
+      alert(courses)
+
+      for (var ctr = 0; ctr < 5; ctr++) {
+        var message = `course # ${ctr + 1} ${courses[ctr]}`
+
+        courses.splice(ctr, 1, prompt(message));
+      }
+
+      alert(`Courses after Edit are ${courses}`)
+    </script>
+</body>
+</html>

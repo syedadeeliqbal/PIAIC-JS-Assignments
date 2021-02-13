@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Assignment</title>
+  </head>
+  <body>
+    <script>
+      // 1. Take a input from user in number with decimal point ``` user input is 3.4```
+      // 2. Convert it into greater number ```Example: Math.ceil(3.4); to 4```
+      // 3. Declear a variable of string and assign some text ``` var text="This is my dummy text" ```
+      // 4. Slice the text into a new variable from 0 to the rounded number ```0 to 4;  Example: text.slice(0, 4)``` | ``` sliceText = This ```
+      // 5. Use for loop and concatination to reverse the sliced string; ```0==>4 ==> This ===> shiT ```
+      // 6. print value in alert ``` "shiT" ```
+
+        var inputDecimal = +prompt("Input decimal number", "3.4");
+        var ceilNumber = Math.ceil(inputDecimal);
+        var testText = "This is some dummy text for Assignment"
+
+        if(ceilNumber > testText.length)
+        {
+            alert(`Index ${ceilNumber} is greater than the length ${testText.length} of the text`)
+            return;
+        }
+
+        var slicedText = testText.slice(0, ceilNumber)
+        var message = `Sliced text is ${slicedText}`
+
+        alert(message)
+
+        var reversedString = ""
+        for(var ctr = slicedText.length - 1; ctr >= 0; ctr--)
+        {
+            reversedString += slicedText.charAt(ctr);
+        }
+
+        alert(`Reversed text is ${reversedString}`)
+
+    </script>
+  </body>
+</html>
