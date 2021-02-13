@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment # 2 10-14</title>
+</head>
+<body>
+    <script>
+           // -----------------------
+      // #### Second Assignment - Make a Percentage Calculator
+
+      // 1. Get the 5-course number from the user```for example course1 is 70```
+      // var totalMarks = 500
+      // 2. Calculate the total percentage ``` formula:  obtainedMarks * 100/ totalMarks ```
+      // 3. print output in alert.
+
+      var obtainedMarks = 0
+      var totalMarks = 500
+      for(var ctr = 1; ctr <= 5; ctr++)
+      {
+          var msg = `Enter score for course # ${ctr}`
+          var score = +prompt(msg)
+
+          if(score < 0 || score > 100)
+            throw("invalid score. Score should be between 0 and 100")
+
+            obtainedMarks += score
+      }
+
+      var totalPercentage = (obtainedMarks * 100)/totalMarks
+      var finalMessage = `Total percentage = ${obtainedMarks} * 100 / ${totalMarks} = ${totalPercentage} `
+      alert(finalMessage)
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Assignment</title>
+  </head>
+  <body>
+    <script>
+      //         #### Make a Calculator
+      // 1. input a value from user ```for example num1 is 7```
+      // 1. input a second value from user ```for example num2 is 3```
+      // 3. input a third value from user ```for example sign is "+" or "-" or "*" or "/" or "%"```
+      // 4. print operation in alert() ```7-3 =4, or 7*3 =21, or 7/3 =2.3, or 7+3 =10 or 7%3 =1```
+
+      var num1 = +prompt("Enter first number");
+      var num2 = parseInt(prompt("Enter second number"));
+      var operator = prompt("Enter operator");
+
+      var result;
+      var message;
+      switch (operator) {
+        case "+":
+          result = num1 + num2;
+          break;
+        case "-":
+          result = num1 - num2;
+          break;
+        case "*":
+          result = num1 * num2;
+          break;
+        case "/":
+          result = num1 / num2;
+          break;
+        case "%":
+          result = num1 % num2;
+          break;
+        default:
+          alert("Invalid operator");
+          break;
+      }
+      message = `${num1}${operator}${num2} = ${result}`;
+
+      alert(message);
+    </script>
+  </body>
+</html>
