@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Assignment 35-38</title>
+  </head>
+  <body>
+    <script>
+      // Assignment # 1
+      var inputValue = prompt("Enter input", "cloUd naTive computinG");
+      console.log(`${convertToCamelCase(inputValue)}`);
+
+      function convertToCamelCase(inputString) {
+        inputString = inputString.toLowerCase();
+        var properCaseSol1 = "";
+        for (var ctr = 0; ctr < inputString.length; ctr++) {
+          if (ctr == 0 || inputString[ctr - 1] === " ") {
+            properCaseSol1 = properCaseSol1.concat(
+              inputString[ctr].toUpperCase().toString()
+            );
+          } else {
+            properCaseSol1 = properCaseSol1.concat(inputString[ctr]);
+          }
+        }
+        return properCaseSol1;
+      }
+      //Assignment # 2
+      var inputFactorialNum = +prompt(
+        "Input a number to calculate factorial",
+        "5"
+      );
+
+      console.log(`Factorial is: ${fact(inputFactorialNum)}`);
+      function fact(num) {
+        if (num <= 1) return num;
+        return num * fact(num - 1);
+      }
+    </script>
+  </body>
+</html>

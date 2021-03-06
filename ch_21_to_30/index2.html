@@ -8,24 +8,33 @@
   </head>
   <body>
     <script>
-      //         #### Second Assignment
-
-      // 1. input value from user in String ```var inputValue="cloUd naTive computinG"```
-      // 2. Convert every first letter of the content in Capitalize case. ```inputValue="Cloud Native Computing"```
-      // 3. print value in console.log() ```console.log(inputValue) | check result in browser console```
-
       var inputValue = prompt("Enter a test string", "clouD naTive compUTing is amazing s");
       inputValue = inputValue.toLowerCase();
+
+      // Solution # 1
+      var properCaseSol1 = "";
+      for(var ctr = 0; ctr < inputValue.length; ctr++)
+      {
+          if(ctr == 0 || inputValue[ctr - 1] === ' '){
+            properCaseSol1 = properCaseSol1.concat(inputValue[ctr].toUpperCase().toString())
+          }
+          else{
+            properCaseSol1 = properCaseSol1.concat(inputValue[ctr])
+          }
+      }
+      console.log("Solution # 1")
+      console.log(properCaseSol1);
+
+
+      // Solution # 2
       var properCased = inputValue[0].toUpperCase() + inputValue.slice(1);
 
       for (ctr = 1; ctr < properCased.length - 1; ctr++) {
         if (properCased[ctr] === " " && ctr < properCased.length - 1) {
-          properCased =
-            properCased.slice(0, ctr + 1) + 
-            properCased[ctr + 1].toUpperCase() +
-            properCased.slice(ctr + 2);
+          properCased = properCased.slice(0, ctr + 1) + properCased[ctr + 1].toUpperCase() + properCased.slice(ctr + 2);
         }
       }
+      console.log("Solution # 2")
       console.log(properCased);
 
     </script>

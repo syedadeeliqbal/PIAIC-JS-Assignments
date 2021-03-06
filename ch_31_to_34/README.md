@@ -10,7 +10,6 @@ Java-script assignments chapter 31 to 34
 4. input your DOB(year) through prompt. 	
 ``` for example year is  "1999" ```
 
-
 5. print meassage in console.log()
    ``` "Hello Ameen Alam, Good Morning, AfterNoon, Evening or Night" ```
 

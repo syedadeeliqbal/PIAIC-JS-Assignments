@@ -18,22 +18,21 @@
       // 6. print courses array in alert```example: alert(courses)``` -->
 
       var courses = [];
-      for (var ctr = 0; ctr < 5; ctr++) {
-        var message = `Enter course # ${ctr + 1}`
-
-        courses.push(prompt(message));
-      }
+      courses.push(prompt("Enter course # 1"));
+      courses.push(prompt("Enter course # 2"));
+      courses.push(prompt("Enter course # 3"));
+      courses.push(prompt("Enter course # 4"));
+      courses.push(prompt("Enter course # 5"));
 
       alert(courses)
 
-      for (var ctr = 0; ctr < 5; ctr++) {
-        var message = `course # ${ctr + 1} ${courses[ctr]}`
-
-        courses.splice(ctr, 1, prompt(message));
-      }
+      courses.splice(0, 1, prompt("Enter course # 1 to edit:" + courses[0]));  
+      courses.splice(1, 1, prompt("Enter course # 2 to edit:" + courses[1])); 
+      courses.splice(2, 1, prompt("Enter course # 3 to edit:" + courses[2]));  
+      courses.splice(3, 1, prompt("Enter course # 4 to edit:" + courses[3]));  
+      courses.splice(4, 1, prompt("Enter course # 5 to edit:" + courses[4]));  
 
       alert(`Courses after Edit are ${courses}`)
-
     </script>
   </body>
 </html>

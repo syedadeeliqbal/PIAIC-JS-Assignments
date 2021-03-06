@@ -1,0 +1,53 @@
+<!-- #### Make a Percentage Calculator
+
+1. Get the 5-course number from the user```for example course1 is 70```
+var totalMarks = 500
+2. Calculate the total percentage ``` formula:  obtainedMarks * 100/ totalMarks ```
+3. Calculate the grade ```use switch case```
+``` Grade A+ 90% to 100% , Grade A 75% to 89% , Grade B 60% to 74% , Grade C 45% to 60% , Grade D 30% to 44% Grade F 0% to 29%```
+4. print output in alert. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment 39 to 42</title>
+</head>
+<body>
+<script>
+var totalMarks = 500;
+var obtainedMarks = 0;
+for(var ctr = 1; ctr <= 5; ctr++){
+obtainedMarks += +prompt(`Enter the score for course ${ctr} out of 100`)
+}
+
+var totalPercentage = Math.floor(obtainedMarks * 100 / totalMarks);
+
+console.log(totalPercentage)
+
+var grade = "Percentage not valid";
+switch(true){
+    case totalPercentage >= 90 && totalPercentage <= 100:
+        grade = "A+"
+        break;
+        case totalPercentage >= 75 && totalPercentage <= 89:
+        grade = "A"
+        break;
+        case totalPercentage >= 60 && totalPercentage <= 74:
+        grade = "B"
+        break;
+        case totalPercentage >= 45 && totalPercentage <= 60:
+        grade = "C"
+        break;
+        case totalPercentage >= 30 && totalPercentage <= 44:
+        grade = "D"
+        break;
+        case totalPercentage >= 0 && totalPercentage <= 29:
+        grade = "F"
+        break;
+}
+alert(`Your grade is ${grade}`)
+</script>    
+</body>
+</html>
